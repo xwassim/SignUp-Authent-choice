@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Fugaz+One&display=swap');
+
+body{
+    background-color: #FBEDEC;
+    width: 100%;
+   
+    /* color: #191A43; */
+}
+
+.titre{
+    margin-top: 20px;
+    max-width: 100%;
+   text-align: center;
+   color: #022469;
+  
+}
+h1{
+    font-family: 'Concert One';
+   
+}
+
+.formulaire{
+    max-width: 100%; 
+    display: flex;
+    justify-content: center;
+   
+}
+
+
+form{
+    margin-top: 30px;
+    padding: 20px 30px;
+    font-family: 'Inter';
+    background-color: #F5D5D5;
+    border-radius: 65px;
+   
+}
+
+.phrase{
+    font-size:x-large;
+    text-align: center;
+}
+
+.code {
+    /* background-color: red; */
+    
+    display: flex;
+   justify-content: center;
+  
+    align-items: center;
+    max-width: 100%;
+}
+
+.code input{
+    margin-top: 30px;
+    height: 6em;
+    width: 6em;
+    margin-right: 1rem;
+    text-align: center;
+  
+}
+
+input:nth-of-type(6){
+    margin-right: 0px;
+}
+
+.footerAuth{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+   justify-content: center;
+    align-items: center;
+
+}
+
+
+
+@media (min-width:460px ) and (max-width:640px ) {
+    /* .auth .titre h2{
+        font-size: 1em;
+    } */
+    .phrase{
+        font-size: 0.9rem;
+    }
+
+    .code{
+        
+        /* margin-left: 1rem; */
+    }
+    .code input{
+        margin-right: 1rem;
+    height: 4em;
+    width: 4em;
+    }
+    input:nth-of-type(6){
+        margin-right: 0px;
+    }
+    
+}
+
+
+@media (max-width:459px )  {
+    /* .auth .titre h2{
+        font-size: 1em;
+    } */
+    .phrase{
+        font-size: 0.8em;
+    }
+
+    .code{
+        
+        /* margin-left: 1rem; */
+    }
+    .code input{
+        margin-right: 1rem;
+    height: 3.2em;
+    width: 3.2em;
+    }
+    input:nth-of-type(6){
+        margin-right: 0px;
+    }
+    
+}
+
+
+
+
+
+
+    
+
+
+    
+
+
+/* .nav {
+    color: #191A43 !important;
+} */
