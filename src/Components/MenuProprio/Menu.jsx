@@ -11,11 +11,34 @@ const Menu = () => {
         <Navbar />
       </nav>
       <div>
-        <h2 className="mt-5  text-blue-950 font-semibold text-4xl text-center ">Menu d'utilisation</h2>
-        <div className="Menu mt-10">
-        <Link>   <img src ={creches} alt="/"></img></Link>
-        <Link>   <img src ={enfant} alt="/"></img></Link>
-        <Link> <img src ={profil} alt="/"></img></Link>
+        <h2 className="mt-5  text-blue-950 font-semibold text-4xl text-center ">
+          Menu d'utilisation
+        </h2>
+        <div className="Menu my-10 ">
+          <Link>
+            {" "}
+            <img
+              src={creches}
+              alt="/"
+              className="hover:scale-105 duration-300"
+            ></img>
+          </Link>
+          <Link>
+            {" "}
+            <img
+              src={enfant}
+              alt="/"
+              className="hover:scale-105 duration-300"
+            ></img>
+          </Link>
+          <Link>
+            {" "}
+            <img
+              src={profil}
+              alt="/"
+              className="hover:scale-105 duration-300"
+            ></img>
+          </Link>
         </div>
       </div>
     </>

@@ -41,10 +41,11 @@ h1{
 /* style du component form dans la page SignUp*/
 form{
     margin-top: 30px;
-    padding: 20px 30px;
+    padding: 40px 40px;
     font-family: 'Inter';
     background-color: #F5D5D5;
     border-radius: 65px;
+    border: 3px solid rgb(248, 116, 116);
    
 }
 
@@ -142,27 +143,36 @@ input:nth-of-type(6){
 /*----------------------------------------------------------------------Choix d'utilisation------------------------------------------------------------*/
 
 /**/
+
+
 .Choose{
-    display: flex;
+    
+    margin-top: -150px;
+    display: flex;   
     justify-content: center;
-    height: 500vh;
-    max-width: 100%; 
-    background-image: url("./Components/Assets/BlueShapeInclined.svg");
-    background-repeat: no-repeat;
+    align-items: center;
+    /* height: 100vh;  */
+    /* background-image: url("./Components/Assets/BlueShapeInclined.svg");
+    background-repeat: no-repeat; */
     color: aliceblue;
 }
 
 
 .Choose img{
-    margin-top: -50px;
-    height: 400px;
-    width: 300px;
-    box-shadow: red;
+    /* margin-top: -50px; */
+    height: 700px;
+    width: 600px;
+    
 }
 
 
 
-
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* set the height of the container to the full viewport height */
+  }
 
 
 
@@ -176,12 +186,16 @@ input:nth-of-type(6){
         flex-direction: column;
        justify-content: center;
         align-items: center;
-       background-image: none;
        background-color:rgba(244, 137, 155, 0.3);
-       margin: 0px 50px;
-       color: #022469;
+       margin: 0px 200px;
+       
        border-radius: 55px;
-       height: 150vh;
+       
+    }
+
+    .Choose img{
+        height: 400px;
+        width: 300px;
     }
 }
 

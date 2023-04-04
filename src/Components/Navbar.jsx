@@ -3,10 +3,11 @@ import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { PhotoIcon, UserCircleIcon } from "@heroicons/react/24/solid";
 import LOGO from "./Assets/LOGO (1).svg";
+import SignUp from "./SignUp";
 
 const navigation = [
   { name: "Connexion", href: "#", current: true },
-  { name: "S'inscrire", href: "#", current: false },
+  { name: "S'inscrire", href: "./SignUp", current: false },
   { name: "Rechercher", href: "#", current: false },
   { name: "A propos de nous", href: "#", current: false },
 ];
