@@ -1,17 +1,18 @@
-import { Fragment } from 'react'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
-import { PhotoIcon, UserCircleIcon } from '@heroicons/react/24/solid'
+import { Fragment } from "react";
+import { Disclosure, Menu, Transition } from "@headlessui/react";
+import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { PhotoIcon, UserCircleIcon } from "@heroicons/react/24/solid";
+import LOGO from "./Assets/LOGO (1).svg";
 
 const navigation = [
-  { name: 'Se connecter', href: '#', current: true },
-  { name: "S'inscrire", href: '#', current: false },
-  { name: 'Rechercher', href: '#', current: false },
-  { name: 'A propos de nous', href: '#', current: false },
-]
+  { name: "Connexion", href: "#", current: true },
+  { name: "S'inscrire", href: "#", current: false },
+  { name: "Rechercher", href: "#", current: false },
+  { name: "A propos de nous", href: "#", current: false },
+];
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
+  return classes.filter(Boolean).join(" ");
 }
 
 export default function Navbar() {
@@ -19,9 +20,9 @@ export default function Navbar() {
     <Disclosure as="nav" className="bg-FBEDEC">
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl px-2 md:px-8 lg:px-8">
             <div className="relative flex h-16 items-center justify-between">
-              <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+              <div className="absolute inset-y-0 left-0 flex items-center md:hidden">
                 {/* Mobile menu button*/}
                 <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="sr-only">Open main menu</span>
@@ -32,9 +33,10 @@ export default function Navbar() {
                   )}
                 </Disclosure.Button>
               </div>
-              <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+              <div className="flex flex-1 items-center justify-center md:items-stretch md:justify-start">
                 <div className="flex flex-shrink-0 items-center">
-                  {/* <img
+                  {
+                    /* <img
                      className="block h-2 w-auto lg:hidden"
                     src="Logo2.png"
                     alt="logo"
@@ -44,21 +46,22 @@ export default function Navbar() {
                     src="Logo2.png"
                     alt="logo"
                   /> */
-                  <img src ="Logo1.SVG" height="40px" width="40px" alt="logo"></img>
-                  
+                    <img src={LOGO} width="160px" alt="logo"></img>
                   }
                 </div>
-                <div className="hidden sm:ml-6 sm:block">
+                <div className="hidden md:ml-6 md:block">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
                       <a
                         key={item.name}
                         href={item.href}
                         className={classNames(
-                          item.current ? 'bg-red-400 text-white hover:bg-rose-900' : 'text-blue-950 hover:bg-red-400 hover:text-white',
-                          'rounded-md px-3 py-2 text-sm font-medium'
+                          item.current
+                            ? "bg-red-400 px-1 text-white hover:bg-rose-900"
+                            : "text-blue-950 hover:bg-red-400 hover:text-white",
+                          "rounded-md  px-3 py-2 text-sm font-medium "
                         )}
-                        aria-current={item.current ? 'page' : undefined}
+                        aria-current={item.current ? "page" : undefined}
                       >
                         {item.name}
                       </a>
@@ -66,7 +69,7 @@ export default function Navbar() {
                   </div>
                 </div>
               </div>
-              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static md:inset-auto md:ml-6 md:pr-0">
                 <button
                   type="button"
                   className="rounded-full bg-red-400 p-1 text-rose-950 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-rose-950"
@@ -80,12 +83,16 @@ export default function Navbar() {
                   <div>
                     <Menu.Button className="flex rounded-full bg-gray-400 text-sm focus:outline-none focus:ring-1 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                       <span className="sr-only">Open user menu</span>
-                      {/* <img
+                      {
+                        /* <img
                         className="h-8 w-8 rounded-full"
                         src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                         alt=""
                       /> */
-                      <UserCircleIcon className="h-9 w-9 text-gray-300" aria-hidden="true" />
+                        <UserCircleIcon
+                          className="h-9 w-9 text-gray-300"
+                          aria-hidden="true"
+                        />
                       }
                     </Menu.Button>
                   </div>
@@ -103,7 +110,10 @@ export default function Navbar() {
                         {({ active }) => (
                           <a
                             href="target_blank"
-                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                            className={classNames(
+                              active ? "bg-gray-100" : "",
+                              "block px-4 py-2 text-sm text-gray-700"
+                            )}
                           >
                             Mon profil
                           </a>
@@ -113,7 +123,10 @@ export default function Navbar() {
                         {({ active }) => (
                           <a
                             href="target_blank"
-                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                            className={classNames(
+                              active ? "bg-gray-100" : "",
+                              "block px-4 py-2 text-sm text-gray-700"
+                            )}
                           >
                             Parametres
                           </a>
@@ -123,7 +136,10 @@ export default function Navbar() {
                         {({ active }) => (
                           <a
                             href="target_blank"
-                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                            className={classNames(
+                              active ? "bg-gray-100" : "",
+                              "block px-4 py-2 text-sm text-gray-700"
+                            )}
                           >
                             Deconnexion
                           </a>
@@ -136,7 +152,7 @@ export default function Navbar() {
             </div>
           </div>
 
-          <Disclosure.Panel className="sm:hidden">
+          <Disclosure.Panel className=" md:hidden">
             <div className="space-y-1 px-2 pb-3 pt-2">
               {navigation.map((item) => (
                 <Disclosure.Button
@@ -144,10 +160,12 @@ export default function Navbar() {
                   as="a"
                   href={item.href}
                   className={classNames(
-                    item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                    'block rounded-md px-3 py-2 text-base font-medium'
+                    item.current
+                      ? "bg-rose-900 text-white"
+                      : "text-blue-950 hover:bg-red-700 hover:text-white",
+                    "block rounded-md px-3 py-2 text-base font-medium"
                   )}
-                  aria-current={item.current ? 'page' : undefined}
+                  aria-current={item.current ? "page" : undefined}
                 >
                   {item.name}
                 </Disclosure.Button>
@@ -157,5 +175,5 @@ export default function Navbar() {
         </>
       )}
     </Disclosure>
-  )
+  );
 }
