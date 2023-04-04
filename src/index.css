@@ -4,13 +4,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Fugaz+One&display=swap');
 
+
+/* body de toutes les pages*/
 body{
     background-color: #FBEDEC;
     width: 100%;
-   
-    /* color: #191A43; */
 }
 
+
+
+/*----------------------------------------------------------------------SignUp------------------------------------------------------------*/
+
+/* div qui contient le titre de la page SignUp*/
 .titre{
     margin-top: 20px;
     max-width: 100%;
@@ -18,11 +23,14 @@ body{
    color: #022469;
   
 }
+
+/* tout les h1 de toutes les pages*/
 h1{
     font-family: 'Concert One';
    
 }
 
+/*div contenant le component Form dans la page SignUp*/
 .formulaire{
     max-width: 100%; 
     display: flex;
@@ -30,7 +38,7 @@ h1{
    
 }
 
-
+/* style du component form dans la page SignUp*/
 form{
     margin-top: 30px;
     padding: 20px 30px;
@@ -40,21 +48,24 @@ form{
    
 }
 
+
+/*---------------------------------------------------------------------Authentification------------------------------------------------------------*/
+/*style de la phrase dans la page authentification*/
 .phrase{
     font-size:x-large;
     text-align: center;
 }
 
+
+/* div contenant les 6 inputs du code de verfication dans Authentification*/
 .code {
-    /* background-color: red; */
-    
     display: flex;
-   justify-content: center;
-  
+    justify-content: center;
     align-items: center;
     max-width: 100%;
 }
 
+/* les 6 inputs du code de verfication dans Authentification*/
 .code input{
     margin-top: 30px;
     height: 6em;
@@ -64,10 +75,13 @@ form{
   
 }
 
+/* une exception pour le 6 eme input situe a droite*/
 input:nth-of-type(6){
     margin-right: 0px;
 }
 
+
+/*div contenant les buttuon renvoyer le code et suivant*/
 .footerAuth{
     margin-top: 40px;
     display: flex;
@@ -77,7 +91,7 @@ input:nth-of-type(6){
 
 }
 
-
+/* Responsive de la page Authentification*/
 
 @media (min-width:460px ) and (max-width:640px ) {
     /* .auth .titre h2{
@@ -102,7 +116,6 @@ input:nth-of-type(6){
     
 }
 
-
 @media (max-width:459px )  {
     /* .auth .titre h2{
         font-size: 1em;
@@ -126,6 +139,76 @@ input:nth-of-type(6){
     
 }
 
+/*----------------------------------------------------------------------Choix d'utilisation------------------------------------------------------------*/
+
+/**/
+.Choose{
+    display: flex;
+    justify-content: center;
+    height: 500vh;
+    max-width: 100%; 
+    background-image: url("./Components/Assets/BlueShapeInclined.svg");
+    background-repeat: no-repeat;
+    color: aliceblue;
+}
+
+
+.Choose img{
+    margin-top: -50px;
+    height: 400px;
+    width: 300px;
+    box-shadow: red;
+}
+
+
+
+
+
+
+
+
+
+/* Responsive de la page choix d'utilisation*/
+@media (max-width:800px) {
+    .Choose{
+       
+        display: flex;
+        flex-direction: column;
+       justify-content: center;
+        align-items: center;
+       background-image: none;
+       background-color:rgba(244, 137, 155, 0.3);
+       margin: 0px 50px;
+       color: #022469;
+       border-radius: 55px;
+       height: 150vh;
+    }
+}
+
+
+
+
+
+
+.Menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+     align-items: center;
+}
+
+
+.Menu img:hover{
+
+    border-radius: 60px;
+    box-shadow: 7px 7px 50px rgba(119, 193, 249, 0.74);
+    
+}
+
+
+
+
+
 
 
 
@@ -137,6 +220,3 @@ input:nth-of-type(6){
     
 
 
-/* .nav {
-    color: #191A43 !important;
-} */
